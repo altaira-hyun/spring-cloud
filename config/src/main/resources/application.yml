@@ -3,11 +3,10 @@
      name: config-server
    cloud:
      config:
-       server:
+       server: 
      git:
        uri: https://github.com/altaira-hyun/spring-cloud.git # git repository 주소
-       username: {username}
-       password: {password}
+
  server:
    port: 8888
 
