@@ -1,0 +1,14 @@
+
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://service-discovery-svc:8080/eureka/
