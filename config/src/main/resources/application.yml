@@ -1,0 +1,19 @@
+ spring:
+   application:
+     name: config-server
+   cloud:
+     config:
+       server:
+     git:
+       uri: https://github.com/altaira-hyun/spring-cloud.git # git repository 주소
+       username: {username}
+       password: {password}
+ server:
+   port: 8888
+
+ # Eureka(service discovery)를 사용할 경우 아래 설정 추가
+ eureka:
+   client:
+     serviceUrl:
+       defaultZone: http://service-discovery-svc:8080/eureka/
+     enabled: true
