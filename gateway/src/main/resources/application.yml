@@ -27,7 +27,7 @@ spring:
           predicates:
             - Path=/go-service/**
   config:
-    import: "optional:configserver:http://config-server-svc:8080"
+    uri: http://config-server-svc:8080
 
 management:
   endpoints:
