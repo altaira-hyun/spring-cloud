@@ -14,7 +14,7 @@ spring:
     gateway:
       routes:
         - id: spring-service
-          uri: http://gateway.altair-lab.com
+          uri: http://api-gateway-svc:8081
           predicates:
             - Path=/spring-service/**
         - id: flask-service
