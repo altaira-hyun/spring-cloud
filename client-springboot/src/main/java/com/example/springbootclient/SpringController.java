@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Value;
 
 
-@RefreshScope
 @RestController
-public class SimpleController {
+public class RestController {
 
     @Value("${example.name}")
     private String name;
@@ -15,7 +14,7 @@ public class SimpleController {
     @Value("${example.type}")
     private String type;
 
-    @GetMapping("")
+    @GetMapping("/spring-service")
     public String simple(){
         return "name: " + name + " / type: " + type;
     }
