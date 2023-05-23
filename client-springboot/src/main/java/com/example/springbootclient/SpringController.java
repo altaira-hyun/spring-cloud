@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 
 @RestController
-public class RestController {
+public class SpringController {
 
     @Value("${example.name}")
     private String name;
@@ -15,7 +15,9 @@ public class RestController {
     private String type;
 
     @GetMapping("/spring-service")
-    public String simple(){
+    public String springController() {
+        return "spring controller response";
         return "name: " + name + " / type: " + type;
+
     }
 }
