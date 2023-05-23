@@ -4,18 +4,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RefreshScope
+
 @RestController
-public class SimpleController {
+public class SpringController {
 
-    @Value("${example.name}")
-    private String name;
-
-    @Value("${example.type}")
-    private String type;
-
-    @GetMapping("")
-    public String simple(){
-        return "name: " + name + " / type: " + type;
+    @GetMapping("/spring-service")
+    public String springController() {
+        return "spring controller response";
     }
 }
