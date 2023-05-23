@@ -3,8 +3,10 @@ package com.example.springbootclient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@RefreshScope
 @RestController
-public class SpringController {
+public class SimpleController {
 
     @Value("${example.name}")
     private String name;
@@ -12,10 +14,8 @@ public class SpringController {
     @Value("${example.type}")
     private String type;
 
-    @GetMapping("/spring-service")
-    public String springController() {
-        return "spring controller response";
+    @GetMapping("")
+    public String simple(){
         return "name: " + name + " / type: " + type;
-
     }
 }
