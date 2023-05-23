@@ -16,7 +16,7 @@ public class SpringController {
 
     @GetMapping("/spring-service")
     public String springController() {
-        //return "spring controller response";
-        return "name: " + name + " / type: " + type;
+        return "spring controller response";
+        //return "name: " + name + " / type: " + type;
     }
 }
