@@ -1,2 +1,3 @@
 example:
-  phase: "prod"
+  name: prod
+  type: prod
