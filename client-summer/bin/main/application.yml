@@ -1,0 +1,13 @@
+server:
+  port: 8030
+
+spring:
+  application:
+    name: spring-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://service-discovery-svc:8080/eureka/
