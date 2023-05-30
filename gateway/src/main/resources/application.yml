@@ -9,7 +9,7 @@ eureka:
 
 spring:
   application:
-    name: apigateway-service
+    name: api-gateway-service
   cloud:
     gateway:
       routes:
@@ -17,8 +17,8 @@ spring:
           uri: lb://spring-service
           predicates:
             - Path=/spring-service/**
-        - id: flask-service
-          uri: lb://FLASK-SERVICE
+        - id: summer-service
+          uri: lb://SUMMER-SERVICE
           predicates:
             - Path=/flask-service/**
         - id: go-service
