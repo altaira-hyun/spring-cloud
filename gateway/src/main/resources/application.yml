@@ -14,7 +14,7 @@ spring:
     gateway:
       routes:
         - id: spring-service
-          uri: lb://spring-service
+          uri: lb://SPRING-SERVICE
           predicates:
             - Path=/spring-service/**
         - id: summer-service
