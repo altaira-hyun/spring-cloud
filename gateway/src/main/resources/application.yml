@@ -14,7 +14,7 @@ spring:
     gateway:
       routes:
         - id: spring-service
-          uri: http://spring-service-svc:8088
+          uri: lb://spring-service
           predicates:
             - Path=/spring-service/**
         - id: flask-service
