@@ -4,14 +4,6 @@ server:
 spring:
   application:
     name: spring-service
-  cloud:
-    kubernetes:
-      reload:
-        enabled: true
-    discovery:
-        enabled: true
-    #client:
-    #  hostname: ${SPRING_SERVICE_SVC_SERVICE_HOST}:${SPRING_SERVICE_SVC_SERVICE_PORT}
   config:
     import: configserver:http://config-server-svc.spring-cloud.svc.cluster.local:8080
   #profiles:

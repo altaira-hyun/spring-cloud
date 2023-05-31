@@ -5,12 +5,8 @@ server:
 spring:
   application:
     name: service-discovery
-  config:
-    import: configserver:http://config-server-svc.spring-cloud.svc.cluster.local:8080
 
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: false
-    service-url:
-      defaultZone: http://service-discovery-svc.spring-cloud.svc.cluster.local:8080
