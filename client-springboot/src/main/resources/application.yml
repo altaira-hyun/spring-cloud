@@ -13,6 +13,9 @@ spring:
   #    active: dev
 
 eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: ${spring.cloud.client.hostname}
   client:
     register-with-eureka: true
     fetch-registry: true
