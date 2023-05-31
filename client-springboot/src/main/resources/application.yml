@@ -13,16 +13,13 @@ spring:
     #client:
     #  hostname: ${SPRING_SERVICE_SVC_SERVICE_HOST}:${SPRING_SERVICE_SVC_SERVICE_PORT}
   config:
-    import: configserver:http://config-server-svc:8080
+    import: configserver:http://config-server-svc.spring-cloud.svc.cluster.local:8080
   #profiles:
   #    active: dev
 
 eureka:
-  instance:
-    prefer-ip-address: false
-    hostname: ${spring.cloud.client.hostname}
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://service-discovery-svc:8080/eureka/
+      defaultZone: http://service-discovery-svc.spring-cloud.svc.cluster.local:8080
