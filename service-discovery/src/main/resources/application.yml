@@ -6,8 +6,15 @@ spring:
   application:
     name: service-discovery
 
-
 eureka:
+  instance:
+    hostname: service-discovery
   client:
     register-with-eureka: true
     fetch-registry: false
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
+  replica:
+    fetch-interval-seconds: 5
+    register-with-eureka: true
