@@ -4,8 +4,8 @@ server:
 spring:
   application:
     name: spring-service
-  #config:
-  #  import: configserver:http://config-server-svc:8080
+  config:
+    import: configserver:http://config-server-svc:8080
   #profiles:
   #    active: dev
 
