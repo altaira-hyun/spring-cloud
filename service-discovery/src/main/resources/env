@@ -1,1 +1,0 @@
-eureka_servers=http://service-discovery-0.eureka:8761/eureka,http://service-discovery-1.eureka:8761/eureka/
