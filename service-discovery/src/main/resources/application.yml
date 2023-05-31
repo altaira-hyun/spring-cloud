@@ -12,7 +12,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: false
     service-url: 
-      defaultZone: service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761,service-discovery-1.service-discovery-svc.spring-cloud.svc.cluster.local:8761,service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka
+      defaultZone: service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka,service-discovery-1.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 60000
