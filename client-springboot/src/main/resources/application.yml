@@ -14,6 +14,10 @@ spring:
     url: jdbc:mysql://mysql-svc.spring-cloud.svc.cluster.local:9009/example?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: Megazone00!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 eureka:
   client:
     register-with-eureka: true
