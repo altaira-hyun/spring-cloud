@@ -3,11 +3,11 @@ server:
 
 eureka:
   client:
-    fetch-registry: true
     register-with-eureka: true
-    serviceUrl:
-      defaultZone: http://service-discovery-svc:8080/eureka/
-    enabled: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka,http://service-discovery-1.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka
+
 
 spring:
   application:

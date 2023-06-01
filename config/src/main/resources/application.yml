@@ -13,6 +13,7 @@ server:
 # Eureka(service discovery)를 사용할 경우 아래 설정 추가
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://service-discovery-svc:8080/eureka/
-    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka,http://service-discovery-1.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka
