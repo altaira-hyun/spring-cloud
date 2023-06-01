@@ -5,16 +5,6 @@ spring:
   application:
     name: spring-service
   cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false
-    discovery:
-      locator:
-        enabled: true
-    kubernetes:
-      loadbalancer:
-        enabled: true
-      enabled: true
     config:
       uri: http://config-server-svc.spring-cloud.svc.cluster.local:8080
   config:
@@ -23,7 +13,7 @@ spring:
 eureka:
   instance:
     preferIpAddress: false
-    hostname: spring-service.spring-cloud.svc.cluster.local
+    hostname: spring-service-svc.spring-cloud.svc.cluster.local:8088
   client:
     register-with-eureka: true
     fetch-registry: true
