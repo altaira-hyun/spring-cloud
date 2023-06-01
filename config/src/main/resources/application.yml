@@ -6,6 +6,8 @@ spring:
       server: 
         git:
           uri: https://github.com/altaira-hyun/spring-cloud.git # git repository 주소
+          search-paths: config-template/**
+          default-label: main
 
 server:
   port: 8888
