@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 public class SpringController {
 
 
-    @GetMapping("/spring-service")
+    @GetMapping("/summer-service")
     public String springController() {
-        return "spring controller response";
+        return "summer controller response";
 
     }
 }

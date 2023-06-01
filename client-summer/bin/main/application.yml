@@ -4,14 +4,14 @@ server:
 spring:
   application:
     name: summer-service
+  cloud:
+    config:
+      uri: http://config-server-svc.spring-cloud.svc.cluster.local:8080
   config:
-    import: configserver:http://config-server-svc:8080
-  profiles:
-      active: dev
-
+    import: "optional:configserver:"
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://service-discovery-svc:8080/eureka/
+      defaultZone: http://service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka,http://service-discovery-1.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka
