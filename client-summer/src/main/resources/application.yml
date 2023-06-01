@@ -9,6 +9,7 @@ spring:
       uri: http://config-server-svc.spring-cloud.svc.cluster.local:8080
   config:
     import: "optional:configserver:"
+    
 eureka:
   client:
     register-with-eureka: true
