@@ -2,22 +2,16 @@ server:
   port: 8030
 
 spring:
+  profiles:
+    active: real
   application:
     name: spring-service
   cloud:
     config:
-      uri: http://config-server-svc.spring-cloud.svc.cluster.local:8888
+      uri: http://config-server-0.config-server-svc.spring-cloud.svc.cluster.local:8888,http://config-server-0.config-server-svc.spring-cloud.svc.cluster.local:8888
   config:
     import: "optional:configserver:"
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-svc.spring-cloud.svc.cluster.local:9009/mydb?createDatabaseIfNotExist=true&serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: Megazone00!
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+
 eureka:
   client:
     register-with-eureka: true
