@@ -11,7 +11,8 @@ spring:
     import: "optional:configserver:"
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-svc.spring-cloud.svc.cluster.local:9009/example?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://mysql-svc.spring-cloud.svc.cluster.local:9009/mydb?createDatabaseIfNotExist=true&serverTimezone=UTC&characterEncoding=UTF-8
+    
     username: root
     password: Megazone00!
   jpa:
