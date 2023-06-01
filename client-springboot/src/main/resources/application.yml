@@ -25,8 +25,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://service-discovery-0.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka,http://service-discovery-1.service-discovery-svc.spring-cloud.svc.cluster.local:8761/eureka
-
-logging:
-  level:
-    root: INFO
-    org.springframework: DEBUG
