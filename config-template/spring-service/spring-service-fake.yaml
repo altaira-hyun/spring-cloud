@@ -1,3 +1,14 @@
 example:
-  name: dev
-  type: dev
+  name: default
+  type: default
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-svc.spring-cloud.svc.cluster.local:9009/mydb?createDatabaseIfNotExist=true&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: Megazone00!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
