@@ -1,11 +1,13 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: service-discovery
+  namespace: spring-cloud
   labels:
     app: service-discovery
 spec:
+  serviceName: "service-discovery-svc"
   replicas: 2
   selector:
     matchLabels:
