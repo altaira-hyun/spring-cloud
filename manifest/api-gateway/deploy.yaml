@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: altaira/api-gateway
+        image: altaira/api-gateway:d21b947d090081892df93272210c0240d766ce4d
