@@ -1,11 +1,13 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: spring-service
+  namespace: spring-cloud
   labels:
     app: spring-service
 spec:
+  serviceName: "spring-service-svc"
   replicas: 2
   selector:
     matchLabels:
@@ -17,4 +19,4 @@ spec:
     spec:
       containers:
       - name: spring-service
-        image: altaira/client-springboot:09a3bbd1ff6f1ce730d55e692106cb5f5f7a372a
+        image: altaira/client-springboot
