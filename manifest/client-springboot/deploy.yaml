@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: spring-service
-        image: altaira/client-springboot
+        image: altaira/client-springboot:eeaa817b5bee7541804faa0e710c289eb2c7c38c
