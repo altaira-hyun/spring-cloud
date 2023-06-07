@@ -1,11 +1,13 @@
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: config-server
+  namespace: spring-cloud
   labels:
     app: config-server
 spec:
+  serviceName: "config-server-svc"
   replicas: 2
   selector:
     matchLabels:
