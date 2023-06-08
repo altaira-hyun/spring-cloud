@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: service-discovery
-        image: altaira/service-discovery
+        image: altaira/service-discovery:4f5dab08be64231e39dda57de7271ea088162cbd
