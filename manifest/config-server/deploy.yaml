@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: config-server
-        image: altaira/config-server
+        image: altaira/config-server:d0507a817331d24d1938e67ae72b3413b1e325ee
