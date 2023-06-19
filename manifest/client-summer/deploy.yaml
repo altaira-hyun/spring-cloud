@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: summer-service
-        image: altaira/client-summer:a207a7ecc651773e27b171157abaa80319aef90f
+        image: altaira/client-summer:7cac6a53f897fbfa520fb003eb0976750af8f067
